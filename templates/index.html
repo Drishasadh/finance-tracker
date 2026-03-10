@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Finance Tracker</title>
+</head>
+
+<body>
+
+<h2>Add Expense</h2>
+
+<form method="POST">
+Item:
+<input type="text" name="item"><br><br>
+
+Amount:
+<input type="number" name="amount"><br><br>
+
+<button type="submit">Add Expense</button>
+</form>
+
+<h2>Expense List</h2>
+
+<ul>
+{% for e in expenses %}
+<li>{{ e.item }} - {{ e.amount }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
